@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 1rem 0;
+    border-top: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.info h3{
+    margin: 10px;
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    .footer {
+        /* margin: 0px 64px; */
+        border-color: aliceblue;
+    }
+
+
+}

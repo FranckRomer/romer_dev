@@ -1,0 +1,212 @@
+.Header {
+    /* margin: 0px 64px; */
+    height: 128px;
+    display: flex;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #e1e3e5;
+    
+}
+
+.Logo h3 {
+    color: #f2496a;
+}
+
+.Logo p {
+    margin-top: -12px;
+}
+
+.Links {
+    display: flex;
+}
+
+.Links h3 {
+    margin: 20px;
+    border-bottom: 1px solid #2596be;
+    color: #2596be;
+}
+
+.Links h4 {
+    margin: 20px;
+    transition: color 400ms;
+}
+.Links h4:hover{
+    color: #2596be;
+}
+
+.iconos {
+    display: flex;
+    align-items: center;
+}
+
+.linkdin,
+.githib,
+.hamburguesa,
+.changeColor {
+    margin: 20px;
+}
+
+.hamburguesa {
+    display: none;
+}
+
+
+/* ------------------------------------------ */
+.exitModal {
+    width: 100vw;
+    height: calc(100vmax + 200px);
+    position: absolute;
+    top: 0;
+    left: calc(-64px);
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    backdrop-filter: blur(2px);
+    transition: backdrop 1s;
+    
+}
+
+.exitModal:hover {
+    backdrop-filter: blur(1px);
+}
+
+.modal {
+    
+    width: 250px;
+    height: calc(100vmax + 200px);
+    margin-right: -32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 1px solid aliceblue;
+    background-color: black;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    color: aliceblue;
+    /* transition: all 2s; */
+    animation-name: setModal;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    /* animation-iteration-count: infinite; */
+}
+.modal::after{
+    right: 256px;
+}
+
+.LogoModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* text-align: center; */
+}
+.LogoModal p{
+    color: aliceblue;
+    margin-left: 20px;
+    margin-top: -18px;
+}
+
+.LogoModal h3 {
+    color: #f2496a;
+    margin-left: 20px;
+}
+.LogoModal img, .linkdinModal img{
+    filter: invert();
+}
+
+
+.LinksModal h3 a {
+    color: #2596be;
+    margin: 20px 0;
+    /* border-bottom: 1px solid #2596be; */
+}
+
+.LinksModal h4 {
+    margin: 60px 0;
+    color: aliceblue;
+}
+
+.linkdinModal,
+.githibModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Linkedid2 img{
+    filter: none;
+}
+
+/* ------------------------------------------ */
+@keyframes setModal {
+    0% {
+  
+        right: -256px;
+    }
+
+    50% {
+        right: -128px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+/* ------------------------------------------ */
+@media only screen and (max-width: 850px) {
+    .hamburguesa {
+        display: block;
+    }
+
+    /* .linkdin, .githib, .hamburguesa, .changeColor{
+        margin: 10px;
+    } */
+    .Links {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    .linkdin,
+    .githib,
+    .hamburguesa,
+    .changeColor {
+        margin: 10px;
+    }
+
+    .exitModal {
+        left: -16px;
+    }
+
+    /* .modal{
+        margin-right: 10px;
+    }
+    .hamburguesaActivada{
+        right: 22px;
+    } */
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .Header {
+        border-bottom: 1px solid white;
+        background-color: black;
+    }
+
+    .hamburguesa img,
+    .changeColor img {
+        filter: invert(1);
+    }
+
+    .exitModal,
+    .modal {
+        height: calc(100vmax + 200px);
+        bottom: 0;
+    }
+}
