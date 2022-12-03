@@ -33,7 +33,7 @@ export default function Home() {
               </div>
               <div className={styles.parrafo_contain}>
                 <div className={styles.parrafo}>
-                  <p>Hi, I'm Francisco, a web developer and IOT developer.</p>
+                  <p>Hi, Im Francisco, a web developer and IOT developer.</p>
                   <p></p>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, inventore delectus eligendi perferendis qui quis odio, recusandae doloribus dicta repellendus accusamus dolorem quisquam quaerat alias ipsam, iste labore. Velit, quis.</p>
                 </div>
